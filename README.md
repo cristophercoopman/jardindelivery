@@ -4,6 +4,5 @@ www.jardindelivery.cl
 
 Jefe y Responsable de Proyecto: Cristopher Coopman Reyes
 
-Desarrollo:   Cristopher Coopman Reyes
-              Gabriel Santibañez
+Desarrollo:   Cristopher Coopman Reyes - Gabriel Santibañez
 
