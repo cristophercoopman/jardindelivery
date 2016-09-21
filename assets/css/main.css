@@ -1,0 +1,326 @@
+/* BODY */
+  body {
+      position: relative; 
+      background-color: #EEECEC;
+  }
+
+  /* MENU */
+  .navbar{
+    background: rgba(185,224,77,1);
+    background: -moz-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(185,224,77,1)), color-stop(50%, rgba(130,200,65,1)), color-stop(100%, rgba(166,229,108,1)));
+    background: -webkit-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -o-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -ms-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: linear-gradient(to bottom, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9e04d', endColorstr='#a6e56c', GradientType=0 );
+    color: #555555;
+  }
+
+  .admin_href {
+    color: grey;
+  }
+
+  #liMenu{
+    color: #555555;
+    font-weight: bold;
+  }
+ 
+  #logo {
+    width: 110px;
+    text-align: center;
+    margin-top: -10px;
+    /*margin-left: 0px;*/
+  }
+
+  #buscador {
+    margin-top: 5px;
+  }
+  /* MENU */
+
+  /* CARROUSEL */
+  #imgCarrousel {
+    height: 400px;
+    margin:auto; 
+    width:100%;
+    /*margin-top: -80px;*/
+  }
+  /* CARROUSEL */
+
+  /* MENU LATERAL HOME */
+  #menuLateral {
+    padding-top:10px;
+  }
+
+  /* MODAL LOGIN */
+  .modal-headerLogin, .h4Login, .close {
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .modal-body {
+    text-align: center;
+  }
+
+  .modal-footerLogin {
+    background-color: #f9f9f9;
+  }
+  /* MODAL LOGIN */
+
+
+  #btnCategorias {
+    background: rgba(185,224,77,1);
+    background: -moz-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(185,224,77,1)), color-stop(50%, rgba(130,200,65,1)), color-stop(100%, rgba(166,229,108,1)));
+    background: -webkit-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -o-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -ms-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: linear-gradient(to bottom, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9e04d', endColorstr='#a6e56c', GradientType=0 );
+    color: #555555;
+    width: 100%; 
+    height: 55px;
+  }
+
+  #btnCategorias div strong {
+    color: #555555;
+    font-weight: bold;
+  }
+
+  /* MENU LATERAL HOME */
+
+  /*CONTENIDO HOME*/
+  .contenido_home {
+    padding-top:20px;
+    color: #fff;
+  }
+
+  .btn-home {
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  .well h5 {
+    color: #555555; 
+  }
+
+  .well h4 {
+    color: #128238; 
+  }
+
+  #tituloCatalogo {
+    margin-top: -10px;
+    color: #128238;
+  }
+
+  /*#thumbnailCatalogo {
+    width: 210px; 
+    height: 150px; 
+    margin-top: -10px;
+  }*/
+
+  #imgCatalogo {
+    width: 200px; 
+    height: 150px;
+  }
+  /* CONTENIDO HOME*/
+
+  #somos h3{
+    color: #128238;
+  }
+
+  #somos p{
+    color: #555555;
+  }
+
+  #contacto h3{
+    color: #128238;
+  }
+
+  #contacto p{
+    color: #555555;
+  }
+
+  #contacto label input{
+    color: #555555;
+    text-align: center;
+  }
+
+  #contacto  input{
+    text-align: center;
+  }
+
+   /* FOOTER */
+  #footer{
+    background: rgba(185,224,77,1);
+    background: -moz-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(185,224,77,1)), color-stop(50%, rgba(130,200,65,1)), color-stop(100%, rgba(166,229,108,1)));
+    background: -webkit-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -o-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -ms-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: linear-gradient(to bottom, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9e04d', endColorstr='#a6e56c', GradientType=0 );
+    color: #555555;
+    font-weight: bold;
+    bottom: 0;
+  }
+  /* FOOTER */
+  
+  /*LOGO REDES SOCIALES*/
+  #logoRedes {
+    width: 40px;
+  }
+
+  #logoInstagram {
+    width: 33px;
+  }
+
+  #logoWhatsapp {
+    width: 30px; 
+  }
+  /*LOGO REDES SOCIALES*/
+
+  /* PANEL ADMIN*/
+  .nombre_menu_admin {
+    margin-top: 15px;
+    font-weight: normal;
+  }
+
+  .banner_admin {
+    margin-top: 30px;
+  }
+
+  .menu_titulo {
+    background-color: black; 
+    color: white;"
+  }
+
+  .menu_admin {
+    margin-top: -20px;
+    width: 100%;
+  }
+  
+  .btnMenu {
+    color: #555555;
+    width: 100%; 
+    height: 70px;
+  }
+  
+  #active {
+    background: rgba(185,224,77,1);
+    background: -moz-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(185,224,77,1)), color-stop(50%, rgba(130,200,65,1)), color-stop(100%, rgba(166,229,108,1)));
+    background: -webkit-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -o-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: -ms-linear-gradient(top, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    background: linear-gradient(to bottom, rgba(185,224,77,1) 0%, rgba(130,200,65,1) 50%, rgba(166,229,108,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9e04d', endColorstr='#a6e56c', GradientType=0 );
+    color: #555555;
+    width: 100%; 
+    height: 70px;
+  }
+  
+  #home_administradores {
+    color: #555555;
+  }
+
+  input {
+    color: #555555; 
+  }
+  /* PANEL ADMIN*/
+  
+  /*div.col-sm-9 div {
+      height: 250px;
+      font-size: 28px;
+  }
+
+  #home_section2 {
+    padding-top:50px;height:500px;color: #fff; background-color: #0A7EA9;
+  }
+  
+  #home_section3 {
+    padding-top:50px;height:500px;color: #fff; background-color: #0A7EA9;
+  }
+  
+  #home_section4 {
+    padding-top:50px;height:500px;color: #fff; background-color: #0A7EA9;
+  }
+  
+  #home_section5 {
+    padding-top:50px;height:500px;color: #fff; background-color: #0A7EA9;
+  }
+
+  #footer_section1 {
+    height:150px;color: #fff; background-color: #332E2E;
+  }
+  
+  #footer_section2 {
+    height:150px;color: #fff; background-color: #332E2E;
+  }
+  
+  #footer_section3 {
+    height:150px;color: #fff; background-color: #332E2E; padding-bottom: 240px;
+  }
+  
+  #footer_section4 {
+    height:150px;color: #fff; background-color: #00bcd4;
+  }
+  
+  #footer_section5 {
+    height:150px;color: #fff; background-color: #009688;
+  }*/
+
+ 
+
+  /* RESPONSIVE DESIGN */
+  @media screen and (max-width: 10010px) {
+    #cerrar_sesion2 {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1010px) {
+    .navbar  {
+      position: absolute;
+    }
+    .navbar-collapse {
+       display: inline;  
+    }
+    #cerrar_sesion1 {
+      display: none;
+    }
+    #cerrar_sesion2 {
+      display: inline;
+    }
+  }
+  @media screen and (max-width: 710px) {
+    #menu2 {
+      display:none;
+    }
+    #logo {
+      margin-top: -15px;
+      margin-left: -25px;
+      width: 80px;
+    }
+    #thumbnailCatalogo {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    #menuLateral {
+      margin-top: 15px;
+    }
+  }
+  @media screen and (max-width: 610px) {
+    #menuLateral {
+      margin-top: 30px;
+    }
+  }
+  @media screen and (max-width: 510px) {
+    #menuLateral {
+      margin-top: 50px;
+    }
+  }
+
+  /* RESPONSIVE DESIGN */
