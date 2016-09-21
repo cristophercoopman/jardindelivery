@@ -40,12 +40,37 @@ class Welcome extends CI_Controller {
 	}
 
 	public function detalle_producto(){
-		print_r("entramos");exit;
 		if(isset($_POST)){
-			$texto 				=	$this->input->post('texto');
-			$data['carrousel']	= 	$this->carrousel_model->getCarrousel();
-			$data['productos']	= 	$this->productos_model->getProductosImagenesByText($texto);
-			$this->load->view('home', $data);
+			$id 		=	$this->input->post('id');
+
+			$producto 	=	$this->productos_model->getDetalleProducto($id);
+			$imagenes 	=	array();
+			$principal	= 	"";
+
+			if(!empty($producto)){
+				
+				foreach($producto as $row){
+					if($row->principal == 'S'){
+						$principal	=	$row->imagen;
+					}else{
+						array_push($imagenes, $row->imagen);	
+					}
+				}
+
+				$data	=	array(
+					'id'		=>	$producto[0]->id,
+					'nombre'	=>	$producto[0]->nombre,
+					'precio'	=>	$producto[0]->precio,
+					'descrip'	=>	$producto[0]->descripcion,
+					'corta'		=>	$producto[0]->corta,
+					'estado'	=>	$producto[0]->estado,
+					'categoria'	=>	$producto[0]->categoria,
+					'principal'	=>	$principal,
+					'imagenes'	=>	$imagenes
+					);
+
+				$this->load->view('detalle_producto', $data);
+			}
 		}
 	}
 }

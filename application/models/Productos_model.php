@@ -156,4 +156,18 @@ class Productos_model extends CI_Model{
 		}
 	}
 
+	public function getDetalleProducto($id){
+		$this->db->select("p.id 'id', p.nombre 'nombre', p.precio 'precio', 
+			p.descripcion 'descripcion', p.estado 'estado', p.descripcion_corta 'corta', 
+			i.nombre 'imagen', i.principal 'principal', c.nombre 'categoria'");
+		$this->db->from('productos p');
+		$this->db->join('imagenes i', 'p.id = i.producto');
+		$this->db->join('categorias c', 'p.categoria = c.id');
+		$this->db->where('p.id', $id);
+		$query	=	$this->db->get();
+		if($query->num_rows() > 0){
+			return $query->result();
+		}
+	}
+
 }
