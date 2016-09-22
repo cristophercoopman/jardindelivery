@@ -11,6 +11,7 @@ class Admin_controller extends CI_Controller
 		$this->load->model('productos_model');
 		$this->load->model('imagenes_model');
 		$this->load->model('carrousel_model');
+		$this->load->model('preguntas_model');
 	}
 
 	public function home(){
@@ -83,6 +84,8 @@ class Admin_controller extends CI_Controller
 			$data['perfil']			=	$this->session->userdata('perfil');
 			
 			$data['administradores']= 	$this->admin_model->getAdministradores();
+			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
+			$data['cantidad']		=	$sinResponder->cantidad;
 
 			$this->load->view('admin_panel', $data);
 		}else{	
@@ -114,6 +117,8 @@ class Admin_controller extends CI_Controller
 			$data['perfil']			=	$this->session->userdata('perfil');
 			
 			$data['administradores']= 	$this->admin_model->getAdministradores();
+			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
+			$data['cantidad']		=	$sinResponder->cantidad;
 
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
@@ -134,6 +139,8 @@ class Admin_controller extends CI_Controller
 			$data['perfil']			=	$this->session->userdata('perfil');
 
 			$data['productos']		= 	$this->productos_model->getProductosImagenes();
+			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
+			$data['cantidad']		=	$sinResponder->cantidad;
 
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
@@ -155,11 +162,36 @@ class Admin_controller extends CI_Controller
 			$data['perfil']			=	$this->session->userdata('perfil');
 
 			$data['carrousel']		= 	$this->carrousel_model->getCarrousel();
+			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
+			$data['cantidad']		=	$sinResponder->cantidad;
 
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
 			
 			$this->load->view('admin_carrousel', $data);
+		}else{	
+			$this->session->set_flashdata('mensaje_error', 'Debe iniciar sesión ');
+			redirect('home');
+		}
+	}
+
+	public function preguntas(){
+		if($this->session->userdata('logueado')){
+			$data 					=	array();
+			$data['id']				=	$this->session->userdata('id');
+			$data['nombreCompleto']	=	$this->session->userdata('nombreCompleto');
+			$data['user']			=	$this->session->userdata('user');
+			$data['password']		=	$this->session->userdata('password');
+			$data['perfil']			=	$this->session->userdata('perfil');
+
+			$data['preguntas']		= 	$this->preguntas_model->getPreguntasActivasProductos();
+			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
+			$data['cantidad']		=	$sinResponder->cantidad;
+			
+			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
+			$data['error']			=	$this->session->flashdata('mensaje_error');
+			
+			$this->load->view('admin_preguntas', $data);
 		}else{	
 			$this->session->set_flashdata('mensaje_error', 'Debe iniciar sesión ');
 			redirect('home');
@@ -240,6 +272,8 @@ class Admin_controller extends CI_Controller
 			$data['perfil']			=	$this->session->userdata('perfil');
 
 			$data['categorias']		= 	$this->categorias_model->getCategorias();
+			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
+			$data['cantidad']		=	$sinResponder->cantidad;
 
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
@@ -439,6 +473,8 @@ class Admin_controller extends CI_Controller
 			$data['perfil']			=	$this->session->userdata('perfil');
 			
 			$data['categorias']		= 	$this->categorias_model->getCategorias();
+			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
+			$data['cantidad']		=	$sinResponder->cantidad;
 
 			if(isset($_POST)){
 				$id 	=	$this->input->post('id');
@@ -609,6 +645,46 @@ class Admin_controller extends CI_Controller
 
 	/*************************************************/
 	/***************** FIN CARROUSEL *****************/
+	/*************************************************/
+
+	/*********************************************/
+	/***************** PREGUNTAS *****************/
+	/*********************************************/
+	
+	public function responder(){
+		if(isset($_POST)){
+			$array	=	array(
+				'respuesta'	=>	$this->input->post('respuesta')
+				);
+
+			$id 	=	$this->input->post('id');
+
+			if($this->preguntas_model->responderPregunta($array, $id)){
+				$this->session->set_flashdata('mensaje_exitoso', 'Pregunta respondida');
+				redirect('Admin_controller/preguntas');	
+			}else{
+				$this->session->set_flashdata('mensaje_error', 'Se ha producido un error. No se ha podido responder la pregunta<br> <strong>Ticket: [Admin_controller/responder]</strong>');
+				redirect('Admin_controller/preguntas');
+			}
+		}
+	}
+
+	public function eliminar_pregunta(){
+		if(isset($_POST)){
+			$id	=	$this->input->post('id');
+
+			if($this->preguntas_model->eliminarPregunta($id)){
+				$this->session->set_flashdata('mensaje_exitoso', 'Pregunta eliminada!');
+				redirect('Admin_controller/preguntas');	
+			}else{
+				$this->session->set_flashdata('mensaje_error', 'Se ha producido un error. No se pudo eliminar la pregunta<br> <strong>Ticket: [Admin_controller/eliminar_pregunta]</strong>');
+				redirect('Admin_controller/preguntas');
+			}
+		}		
+	}
+
+	/*************************************************/
+	/***************** FIN PREGUNTAS *****************/
 	/*************************************************/
 
 	//BORRAR
