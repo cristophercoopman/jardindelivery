@@ -12,6 +12,7 @@ class Admin_controller extends CI_Controller
 		$this->load->model('imagenes_model');
 		$this->load->model('carrousel_model');
 		$this->load->model('preguntas_model');
+		$this->load->library('My_phpmailer');
 	}
 
 	public function home(){
@@ -658,10 +659,38 @@ class Admin_controller extends CI_Controller
 				);
 
 			$id 	=	$this->input->post('id');
+			$mailto	=	$this->input->post('email');
 
 			if($this->preguntas_model->responderPregunta($array, $id)){
-				$this->session->set_flashdata('mensaje_exitoso', 'Pregunta respondida');
-				redirect('Admin_controller/preguntas');	
+				
+				$email	=	"coto.coopman7@gmail.com";
+				$nombre =	"coto";
+				$mensaje= 	$this->input->post('respuesta');
+
+	            //configuración del correo by PHPMailer
+	            $mail = new PHPMailer();
+	            $mail->IsSMTP();            // establecemos que utilizaremos SMTP
+	            $mail->SMTPAuth     = true; // habilitamos la autenticación SMTP
+	            $mail->SMTPSecure   = "ssl";//"ssl" o "tls" establecemos el prefijo del protocolo seguro de comunicación con el servidor
+	            $mail->Host         = "smtp.gmail.com"; // establecemos GMail como nuestro servidor SMTP
+	            $mail->Port         = 465;  // 465 o 587 establecemos el puerto SMTP en el servidor de GMail
+	            $mail->Username     = "coto.coopman7@gmail.com";    // usuario de Gmail (se deben habilitar desde gmail el uso de servicios)
+	            $mail->Password     = "lallevo7";                   // password de la cuenta GMail
+	            $mail->SetFrom($email, $nombre);  // Quien envía el correo
+	            $mail->AddReplyTo($email, $nombre);  //A quien debe ir dirigida la respuesta
+	            $mail->Subject      = "Contacto desde sitio web JardinDelivery.cl";  //Asunto del mensaje
+	            $mail->Body         = "Enviado desde formulario de Contacto del sitio www.jardindelivery.cl\nEnviado el ".date('d-m-Y')." a las ".date('H:i:s')."\n\n"."Respuesta a su pregunta: ".$mensaje;   //contenido del correo
+	            //$mail->AltBody      = "Cuerpo en texto plano";  //contenido del correo
+	            $mail->AddAddress($mailto, $mailto); //  destinatario
+
+	            if(!$mail->Send()) {
+	                //print_r($mail->ErrorInfo);
+	                $this->session->set_flashdata('mensaje_error', 'Se ha producido un error. No se ha podido enviar el mensaje con la respuesta <br> <strong>Ticket: [Admin_controller/responder]</strong>');
+	                redirect('Admin_controller/preguntas');
+	            } else {
+	                $this->session->set_flashdata('mensaje_exitoso', 'Pregunta respondida');
+	                redirect('Admin_controller/preguntas');	
+	            }
 			}else{
 				$this->session->set_flashdata('mensaje_error', 'Se ha producido un error. No se ha podido responder la pregunta<br> <strong>Ticket: [Admin_controller/responder]</strong>');
 				redirect('Admin_controller/preguntas');
