@@ -30,6 +30,7 @@
 							        	<form role="form" method="post" action="<?php echo base_url()?>Admin_controller/responder">
 							        		<td>
 							        			<input type="text" id="id" name="id" value="<?php echo $pregunta->id?>" hidden="true">
+							        			<input type="text" id="email" name="email" value="<?php echo $pregunta->email?>" hidden="true">
 							        			<input type="text" id="respuesta" name="respuesta" value="<?php echo $pregunta->respuesta?>" placeholder="Ingrese respuesta" required>
 							        		</td>
 							        		<td>
