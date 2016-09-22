@@ -31,8 +31,8 @@
 		Fono: +56 9 96282116 &nbsp&nbsp<img src="<?php echo base_url(); ?>assets/img/footer/whatsapp.png" id="logoWhatsapp"></h6>	
 	</div>
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
-		<h5><strong>MEDIOS DE PAGO</strong></h5>
-		<h6>¿Qué medios?</h6><br><br>
+		<h6>Sitio web desarrollado por <strong>CS Soluciones</strong></h6>
+		<h6>Contacto: <strong>coto.coopman7@gmail.com</strong></h6><br>
 	</dih6>
 </footer>
 
