@@ -89,6 +89,9 @@
     font-weight: bold;
   }
 
+  .detalle {
+    color: #555555;
+  }
   /* MENU LATERAL HOME */
 
   /*CONTENIDO HOME*/
@@ -101,6 +104,18 @@
     padding: 0;
     border: none;
     background: none;
+  }
+
+  .detallePregunta {
+    background-color: rgba(31, 89, 44, 0.2);
+    background: rgba(31, 89, 44, 0.2);
+    /*color: rgba(31, 89, 37, 0.3);*/
+  }
+
+  .detalleRespuesta {
+    background-color: rgba(31, 89, 98, 0.3);
+    background: rgba(31, 89, 98, 0.3);
+    /*color: rgba(31, 89, 98, 0.3);*/
   }
 
   .well h5 {
