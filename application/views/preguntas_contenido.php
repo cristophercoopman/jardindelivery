@@ -8,7 +8,7 @@
 				
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="table-responsive">
-						<table class="table text-center">
+						<table class="table table-bordered text-center">
 						    <thead>
 						      	<tr>
 						        	<th>Correo</th>
