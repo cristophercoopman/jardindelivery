@@ -24,7 +24,7 @@
   </li>
   <li>
     <a href="<?php echo base_url() ?>Admin_controller/carrousel" class="menu_admin">
-      <button type="button" class="btn btn-default" id="active">
+      <button type="button" class="btn btn-default btnMenu">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-picture"></span> SLIDER</strong>
         </div>
@@ -33,7 +33,7 @@
   </li>
   <li>
     <a href="<?php echo base_url() ?>Admin_controller/preguntas" class="menu_admin">
-      <button type="button" class="btn btn-default btnMenu">
+      <button type="button" class="btn btn-default" id="active">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-question-sign"></span> PREGUNTAS <?php if($cantidad > 0){ ?> <span class="badge"><?php echo $cantidad?></span> <?php } ?></strong>
         </div>

@@ -20,7 +20,7 @@
 		          	</a>
 		          	<div class="pager">
 			          	<form role="form" method="post" action="<?php echo base_url();?>Admin_controller/modificar_imagen_principal">
-			          		<input type="text" id="id" name="id" value="<?php echo $key->id?>" hidden>
+			          		<input type="text" id="id" name="id" value="<?php echo $key->id?>" hidden="true">
 			          		<input type="text" id="producto" name="producto" value="<?php echo $key->producto?>" hidden>
 			          		<button type="submit" id="btn_imagen" name="btn_imagen" class="btn btn-primary">Elegir como principal</button>
 			          	</form>

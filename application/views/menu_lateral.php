@@ -6,7 +6,7 @@
   </li>
   <li>
     <form role="form" method="post" action="<?php echo base_url();?>Welcome/filtrar_categoria">
-      <input type="text" id="categoria" name="categoria" value="1" hidden>
+      <input type="text" id="categoria" name="categoria" value="1" hidden="true">
       <button type="submit" class="btn btn-success" id="btnCategorias">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-search"></span> ÁRBOLES Y PLANTAS</strong>
@@ -16,7 +16,7 @@
   </li>
   <li>
     <form role="form" method="post" action="<?php echo base_url();?>Welcome/filtrar_categoria">
-      <input type="text" id="categoria" name="categoria" value="2" hidden>
+      <input type="text" id="categoria" name="categoria" value="2" hidden="true">
       <button type="submit" class="btn btn-success" id="btnCategorias">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-search"></span> MACETEROS Y JARDINERAS</strong>
@@ -26,7 +26,7 @@
   </li>
   <li>
     <form role="form" method="post" action="<?php echo base_url();?>Welcome/filtrar_categoria">
-      <input type="text" id="categoria" name="categoria" value="3" hidden>
+      <input type="text" id="categoria" name="categoria" value="3" hidden="true">
       <button type="submit" class="btn btn-success" id="btnCategorias">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-search"></span> TIERRA Y SUSTRATOS</strong>
@@ -36,7 +36,7 @@
   </li>
   <li>
     <form role="form" method="post" action="<?php echo base_url();?>Welcome/filtrar_categoria">
-      <input type="text" id="categoria" name="categoria" value="4" hidden>
+      <input type="text" id="categoria" name="categoria" value="4" hidden="true">
       <button type="submit" class="btn btn-success" id="btnCategorias">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-search"></span> ABONOS Y PESTICIDAS</strong>
@@ -46,7 +46,7 @@
   </li>
   <li>
     <form role="form" method="post" action="<?php echo base_url();?>Welcome/filtrar_categoria">
-      <input type="text" id="categoria" name="categoria" value="5" hidden>
+      <input type="text" id="categoria" name="categoria" value="5" hidden="true">
       <button type="submit" class="btn btn-success" id="btnCategorias">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-search"></span> SEMILLAS Y SEPAS</strong>
@@ -56,7 +56,7 @@
   </li>
   <li>
     <form role="form" method="post" action="<?php echo base_url();?>Welcome/filtrar_categoria">
-      <input type="text" id="categoria" name="categoria" value="6" hidden>
+      <input type="text" id="categoria" name="categoria" value="6" hidden="true">
       <button type="submit" class="btn btn-success" id="btnCategorias">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-search"></span> DECORATIVOS</strong>
@@ -66,7 +66,7 @@
   </li>
   <li>
     <form role="form" method="post" action="<?php echo base_url();?>Welcome/filtrar_categoria">
-      <input type="text" id="categoria" name="categoria" value="7" hidden>
+      <input type="text" id="categoria" name="categoria" value="7" hidden="true">
       <button type="submit" class="btn btn-success" id="btnCategorias">
         <div class="alert"> 
           <strong><span class="glyphicon glyphicon-search"></span> OTROS</strong>

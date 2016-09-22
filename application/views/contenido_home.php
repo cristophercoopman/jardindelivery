@@ -8,7 +8,7 @@
         			<strong><?php echo $row->nombreProducto ?></strong>
       			</h4>
       			<form role="form" method="post" action="<?php echo base_url();?>Welcome/detalle_producto">
-					<input type="text" id="id" name="id" value="<?php echo $row->idProducto?>">
+					<input type="text" id="id" name="id" value="<?php echo $row->idProducto?>" hidden="true">
       				<button type="submit" class="btn btn-home">
 						<a class="thumbnail" id="thumbnailCatalogo">
 			          		<img src="<?php echo base_url()."assets/img/productos/".$row->nombreImagen; ?>" id="imgCatalogo" class="img-responsive margin" style="width:100%" alt="Image">

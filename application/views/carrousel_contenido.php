@@ -60,7 +60,7 @@
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input type="hidden" class="form-control" id="id" name="id" value="<?php echo  $row->id ?>" hidden>
+									<input type="hidden" class="form-control" id="id" name="id" value="<?php echo  $row->id ?>" hidden="true">
 								</div>
 							</div>
 								          	
@@ -69,7 +69,7 @@
 				          	</div>
 			          	</form>
 			          	<form class="text-center" 	role="form" method="post" action="<?php echo base_url() ?>Admin_controller/eliminar_carrousel">
-							<input type="hidden" class="form-control" id="id" name="id" value="<?php echo  $row->id ?>" hidden>
+							<input type="hidden" class="form-control" id="id" name="id" value="<?php echo  $row->id ?>" hidden="true">
 							<div class="text-center" style="margin-top:2px;">
 				          		<button type="submit" class="btn btn-danger">Eliminar</button>
 				          	</div>
