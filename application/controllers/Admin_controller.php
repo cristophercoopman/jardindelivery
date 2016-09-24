@@ -86,7 +86,8 @@ class Admin_controller extends CI_Controller
 			
 			$data['administradores']= 	$this->admin_model->getAdministradores();
 			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
-			$data['cantidad']		=	$sinResponder->cantidad;
+			
+			$data['cantidad']		=	$sinResponder[0]->cantidad;
 
 			$this->load->view('admin_panel', $data);
 		}else{	
@@ -119,7 +120,7 @@ class Admin_controller extends CI_Controller
 			
 			$data['administradores']= 	$this->admin_model->getAdministradores();
 			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
-			$data['cantidad']		=	$sinResponder->cantidad;
+			$data['cantidad']		=	$sinResponder[0]->cantidad;
 
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
@@ -141,7 +142,7 @@ class Admin_controller extends CI_Controller
 
 			$data['productos']		= 	$this->productos_model->getProductosImagenes();
 			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
-			$data['cantidad']		=	$sinResponder->cantidad;
+			$data['cantidad']		=	$sinResponder[0]->cantidad;
 
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
@@ -164,7 +165,7 @@ class Admin_controller extends CI_Controller
 
 			$data['carrousel']		= 	$this->carrousel_model->getCarrousel();
 			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
-			$data['cantidad']		=	$sinResponder->cantidad;
+			$data['cantidad']		=	$sinResponder[0]->cantidad;
 
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
@@ -187,7 +188,7 @@ class Admin_controller extends CI_Controller
 
 			$data['preguntas']		= 	$this->preguntas_model->getPreguntasActivasProductos();
 			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
-			$data['cantidad']		=	$sinResponder->cantidad;
+			$data['cantidad']		=	$sinResponder[0]->cantidad;
 			
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
@@ -274,7 +275,7 @@ class Admin_controller extends CI_Controller
 
 			$data['categorias']		= 	$this->categorias_model->getCategorias();
 			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
-			$data['cantidad']		=	$sinResponder->cantidad;
+			$data['cantidad']		=	$sinResponder[0]->cantidad;
 
 			$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
 			$data['error']			=	$this->session->flashdata('mensaje_error');
@@ -475,7 +476,7 @@ class Admin_controller extends CI_Controller
 			
 			$data['categorias']		= 	$this->categorias_model->getCategorias();
 			$sinResponder 			=	$this->preguntas_model->getCantSinResponder();
-			$data['cantidad']		=	$sinResponder->cantidad;
+			$data['cantidad']		=	$sinResponder[0]->cantidad;
 
 			if(isset($_POST)){
 				$id 	=	$this->input->post('id');

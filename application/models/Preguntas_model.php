@@ -69,7 +69,7 @@ class Preguntas_model extends CI_Model{
 		$this->db->where('estado', "A");
 		$query	=	$this->db->get();
 		if($query->num_rows() > 0){
-			return $query->result()[0];
+			return $query->result();
 		}
 	}
 }

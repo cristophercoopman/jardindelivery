@@ -15,7 +15,7 @@ class Welcome extends CI_Controller {
 	public function index(){
 		$data['carrousel']		= 	$this->carrousel_model->getCarrousel();
 		$data['productos']		= 	$this->productos_model->getProductosHome();
-		$data['exitoso']		=	$this->session->flashdata('mensaje_exitoso');
+		$data['correo_enviado']	=	$this->session->flashdata('mensaje_exitoso');
 		$data['error']			=	$this->session->flashdata('mensaje_error');
 
 		$this->load->view('home', $data);

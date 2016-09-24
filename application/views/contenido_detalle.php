@@ -61,16 +61,16 @@
           <div class="container-fluid text-right">
             <label><?php echo $pregunta->respuesta;?></label>
           </div>
-          <div class="col-sm-12" style="background-color: rgba(32, 31, 32, 0.2);"></div>
-
+          
+        <?php } ?>
+          <div class="col-sm-12" style="background-color: rgba(32, 31, 32, 0.2);"></div><br>
         <?php } 
-        } 
       } ?>
         </div>
       </div>
 
 			<div class="col-sm-12">
-        <div class="well">
+        <div class="well detalle">
           <form role="form" method="post" action="<?php echo base_url();?>Welcome/pregunta_nueva">
             <div class="container-fluid text-left">
               <h4>Deja tus dudas y consultas aquí, serán respondidas a la brevedad</h4>
